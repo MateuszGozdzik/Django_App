@@ -14,7 +14,6 @@ from pathlib import Path
 from dotenv import load_dotenv
 from os import getenv
 import os
-from celery.schedules import crontab
 
 load_dotenv()
 
@@ -166,7 +165,7 @@ EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
 EMAIL_HOST = "smtp.gmail.com"
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
-EMAIL_HOST_USER = getenv("EMAIl")
+EMAIL_HOST_USER = getenv("EMAIL")
 EMAIL_HOST_PASSWORD = getenv("EMAIL_PASSWORD")
 DEFAULT_FROM_EMAIL = getenv("EMAIl")
 
@@ -186,15 +185,3 @@ LOGOUT_REDIRECT_URL = "/"
 # DRIVE_CLIENT_EMAIL = getenv("DRIVE_CLIENT_EMAIL")
 # DRIVE_CLIENT_ID = getenv("DRIVE_CLIENT_ID")
 # DRIVE_CLIENT_X509_CERT_URL = getenv("DRIVE_CLIENT_X509_CERT_URL")
-
-
-# Celery
-
-CELERY_BROKER_URL = "redis://localhost:6379/0"
-CELERY_TIMEZONE = "UTC"
-CELERY_BEAT_SCHEDULE = {
-    "my_daily_task": {
-        "task": "quotes.tasks.my_daily_task",
-        "schedule": crontab(hour=0, minute=0),  # once a day at midnight
-    },
-}

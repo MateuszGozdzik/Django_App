@@ -30,12 +30,12 @@ def register_view(request):
             hash = hashlib.md5(str(random.getrandbits(128)).encode("utf-8")).hexdigest()
             user.gravatar_link = f"https://www.gravatar.com/avatar/{hash}?d=identicon"
             user.save()
-        send_mail(
-            subject="Register in My App",
-            message=f"Thanks for registering {user.username.title()}. Hope you'll have fun.",
-            from_email=getenv("EMAIL"),
-            recipient_list=[user.email],
-        )
+            send_mail(
+                subject="Register in My App",
+                message=f"Thanks for registering {user.username.title()}. Hope you'll have fun.",
+                from_email=getenv("EMAIL"),
+                recipient_list=[user.email],
+            )
         return redirect("/accounts/login")
     else:
         form = CustomUserCreationForm()
