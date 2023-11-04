@@ -33,7 +33,7 @@ DEBUG = getenv("DEBUG", True)
 ALLOWED_HOSTS = ["*"]
 
 CSRF_TRUSTED_ORIGINS = [
-    "https://web-production-7a75.up.railway.app/",
+    "https://web-production-7a75.up.railway.app",
     "https://*.127.0.0.1",
 ]
 
