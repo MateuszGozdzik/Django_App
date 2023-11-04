@@ -1,3 +1,5 @@
+! .env
+
 PGDATABASE=
 PGUSER=
 PGPASSWORD=
@@ -9,3 +11,9 @@ DEBUG=   # Just in develop
 
 EMAIL=
 EMAIL_PASSWORD=
+
+
+! Groups
+todo
+quotes
+approve quotes

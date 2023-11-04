@@ -1,1 +1,1 @@
-# Main App
+# Django App
