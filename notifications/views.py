@@ -12,7 +12,7 @@ def add_notification(notification):
     if notification.user.groups.filter(name="email notifications").exists():
         send_mail(
             subject="New Notification",
-            message=f"You received new notification. Go Check: https://web-production-7633.up.railway.app{notification.link}",
+            message=f"You received new notification. Go Check: https://web-production-7a75.up.railway.app{notification.link}",
             from_email=getenv("EMAIL"),
             recipient_list=[notification.user.email],
         )

@@ -17,3 +17,5 @@ EMAIL_PASSWORD=
 todo
 quotes
 approve quotes
+public account
+quotes newsletter
