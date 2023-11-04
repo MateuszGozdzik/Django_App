@@ -7,7 +7,7 @@ Użytkownik **staff** z hasłem **zaq1@WSX** z możliwością wglądu wszystkich
 Mój pierwszy większy projekt w Django.
 Hostowany na stronie [Railway](https://railway.app/).
 
-Dużo funkcji nie jest dokończonych (między innymi cały front jest na absolutnym minimum), jest możliwość wystąpnienia jeszcze błędów, traktowałem to bardziej jako projekt do nauki i testowania funkcji niż pełnoprawną aplikację.
+Dużo funkcji nie jest dokończonych (między innymi cały front jest na absolutnym minimum), jest możliwość wystąpnienia jeszcze błędów, traktowałem to bardziej jako projekt do nauki i testowania funkcji niż jako pełnoprawną aplikację.
 
 ## Funkcje:
 
