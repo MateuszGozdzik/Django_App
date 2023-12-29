@@ -31,8 +31,6 @@ def register_view(request):
             user.gravatar_link = f"https://www.gravatar.com/avatar/{hash}?d=identicon"
             user.save()
             Group.objects.filter(name="quotes").first().user_set.add(user)
-            print(getenv("EMAIL"))
-            print(getenv("EMAIL_PASSWORD"))
             send_mail(
                 subject="Register in My App",
                 message=f"Thanks for registering {user.username.title()}. Hope you'll have fun.",
